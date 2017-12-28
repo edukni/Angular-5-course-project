@@ -2,8 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
+  // ATTRIBUTE:  selector:'[app-root]' 
+  // CLASS:  selector:'.app-root' 
+
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  //,styles: [`h3 { color: darkblue; } `]
 })
 export class AppComponent {
   name = ''; 
