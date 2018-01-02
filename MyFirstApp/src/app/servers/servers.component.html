@@ -3,12 +3,14 @@
     <div class="row">
         <div class="col-xs-12">
                 <p>Servers Component</p>
-                <button [disabled]="!allowNewServer" class="btn btn-primary">Add Server</button>
+                <button (click)="onCreateServer()" [disabled]="!allowNewServer" class="btn btn-primary">Add Server</button>
                 <!-- String Interpolation -->
                 <p> {{allowNewServer}} </p>
                 <!-- Property Binding -->
                 <p [innerText]="allowNewServer"></p>
                 
+                <p> {{serverCreationStatus}} </p>
+
         </div>
     </div>
 </div>
