@@ -1,0 +1,11 @@
+<button (click)="onToggle()" >Display Details</button>
+
+<p *ngIf="showButton" >Secret Password: KASKDASK2Ñ31249CXZ</p>
+
+
+<div *ngFor="let number of logArray; let i = index" >
+  <div [ngStyle]="{'background-color': i >= 4 ? 'blue' : 'transparent' }" [ngClass]="{textColorWhite: i >= 4 } " >
+      <app-log></app-log>    
+
+  </div>
+</div>
