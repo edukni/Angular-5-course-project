@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-                <p [ngStyle]="{backgroundColor:getColor() }">Server with id: {{serverId }} is {{ getServerStatus() }}   </p>
+                <p [ngClass]="{online: serverStatus === 'online'}" [ngStyle]="{backgroundColor:getColor() }">Server with id: {{serverId }} is {{ getServerStatus() }}   </p>
                 
     </div>
 </div>
