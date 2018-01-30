@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  viewName:string="Game Control";
+  viewNameArray = [{ name: "Game Control"}];
+
 }

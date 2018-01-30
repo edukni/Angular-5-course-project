@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-control.component.css']
 })
 export class GameControlComponent implements OnInit {
-  viewName:string= "Game Control Component";
+  @Input('viewName') name: string; 
+  @Input('viewNameArray') viewNameArray: { name:string } ;
+  
   constructor() { }
+  
 
   ngOnInit() {
+    console.log(this.viewNameArray);
   }
 
 }
