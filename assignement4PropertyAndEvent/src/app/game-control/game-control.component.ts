@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
@@ -8,12 +8,27 @@ import { Component, OnInit, Input } from '@angular/core';
 export class GameControlComponent implements OnInit {
   @Input('viewName') name: string; 
   @Input('viewNameArray') viewNameArray: { name:string } ;
-  
+  @Output() startGame = new EventEmitter<number>();
+  numberSum : number = 0;
   constructor() { }
-  
+  interval;
+      
+
+  onStartGame(){
+    this.interval = setInterval(()=> {
+      this.numberSum++;   
+      this.startGame.emit(this.numberSum);
+      
+    },1000); 
+
+  }
+
+  onStopGame(){
+    clearInterval(this.interval);
+  }
+
 
   ngOnInit() {
-    console.log(this.viewNameArray);
   }
 
 }

@@ -9,15 +9,11 @@ export class AppComponent {
   title = 'app';
   viewName:string="Game Control";
   viewNameArray = [{ name: "Game Control"}];
-  
-  numberSum:number = 0;
+  numberSum : number=1;
+  onStartGame(numberSum: number){
 
-    
-    startGame(){
-       setInterval(()=> {
-        (this.numberSum ++);
-        
-       },1000); 
-    }
+   console.log(numberSum);
+
+  }
 
 }
