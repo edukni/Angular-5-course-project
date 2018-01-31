@@ -10,9 +10,14 @@ export class AppComponent {
   viewName:string="Game Control";
   viewNameArray = [{ name: "Game Control"}];
   numberSum : number=0;
+  numberSumArray=[1];
 
   onStartGame(numberSum: number){
     console.log(numberSum);
     this.numberSum=numberSum;
+    this.numberSumArray.push(numberSum);
   }
+
+
+
 }
