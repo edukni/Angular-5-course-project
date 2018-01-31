@@ -9,5 +9,15 @@ export class AppComponent {
   title = 'app';
   viewName:string="Game Control";
   viewNameArray = [{ name: "Game Control"}];
+  
+  numberSum:number = 0;
+
+    
+    startGame(){
+       setInterval(()=> {
+        (this.numberSum ++);
+        
+       },1000); 
+    }
 
 }
