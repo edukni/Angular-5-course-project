@@ -1,10 +1,9 @@
 <app-game-control (startGame)="onStartGame($event)" [viewName]="viewName" [viewNameArray]="viewNameArray">
 </app-game-control>
-{{numberSum}}
 
-    <app-odd *ngFor="let number of numberSumArray" >
-
-    </app-odd>
-    <app-even *ngFor="let number of numberSumArray">
-
-    </app-even>
+<div *ngFor="let number of numberSumArray">
+    {{number.value}} {{number.type}}
+    <app-odd *ngIf="!(number.value % 2)"></app-odd>
+    <app-even *ngIf="number.value % 2"></app-even>
+</div>
+   

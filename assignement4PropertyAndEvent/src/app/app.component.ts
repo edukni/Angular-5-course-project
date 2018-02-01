@@ -10,12 +10,12 @@ export class AppComponent {
   viewName:string="Game Control";
   viewNameArray = [{ name: "Game Control"}];
   numberSum : number=0;
-  numberSumArray=[1];
-
+  numberSumArray=[{}];
+  numberType:string;
   onStartGame(numberSum: number){
-    console.log(numberSum);
     this.numberSum=numberSum;
-    this.numberSumArray.push(numberSum);
+   var numberType= numberSum %2 ? "even" : "odd";
+    this.numberSumArray.push({value: numberSum, type: numberType});
   }
 
 
