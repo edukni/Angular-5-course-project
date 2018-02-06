@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (activeRecipe)="onActiveRecipe($event)" (activeShopping)="onActiveShopping($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="varBoolean==false"></app-recipes>
+      <app-shopping-list *ngIf="varBoolean==true"></app-shopping-list>
     </div>
   </div>
 </div>
