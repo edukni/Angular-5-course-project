@@ -12,8 +12,9 @@ export class RecipesComponent implements OnInit {
 
   ngOnInit() {
   }
-  recipeItem2(recipeSend:Recipe){
-    console.log(recipeSend);
-  }
 
+  RecipeList(recipe:Recipe){
+    console.log(recipe);
+
+  }
 }
