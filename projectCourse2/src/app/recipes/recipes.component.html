@@ -3,6 +3,7 @@
     <app-recipe-list (RecipeListSended)="RecipeList($event)"></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail ></app-recipe-detail>
+    <app-recipe-detail [recipeSend]="recipeBind"></app-recipe-detail>
   </div>
 </div>
+<button (click)="RecipeList($event)">Recipe List</button>

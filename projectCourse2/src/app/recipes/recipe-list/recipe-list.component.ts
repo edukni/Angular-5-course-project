@@ -20,10 +20,10 @@ export class RecipeListComponent implements OnInit {
   }
   recipeItem(recipe:Recipe){
     this.recipeSend=recipe;
-  }
-  recipeList(recipe:Recipe){
     this.RecipeListSended.emit(this.recipeSend);
+    
   }
+
 
 
 }

@@ -7,14 +7,15 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit {
-
+  recipeBind:Recipe= new Recipe("name", "aksdas", "kasdkas");
+  
   constructor() { }
 
   ngOnInit() {
   }
 
   RecipeList(recipe:Recipe){
-    console.log(recipe);
+    this.recipeBind=recipe;
 
   }
 }
