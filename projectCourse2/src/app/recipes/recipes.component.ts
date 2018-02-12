@@ -7,7 +7,7 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit {
-  recipeBind:Recipe= new Recipe("name", "aksdas", "kasdkas");
+  recipeBind:Recipe= new Recipe("", "", "");
   
   constructor() { }
 
