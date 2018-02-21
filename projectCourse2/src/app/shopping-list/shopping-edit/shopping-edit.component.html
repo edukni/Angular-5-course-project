@@ -5,22 +5,31 @@
           <div class="col-sm-5">
               <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name">
+                  <input 
+                  type="text" 
+                  class="form-control" 
+                  id="name"
+                  #nameInput>
               </div>
           </div>
             <div class="col-sm-2">
                 <div class="form-group">
                     <label for="amount">Amount</label>
-                    <input type="number" class="form-control" id="amount">
+                    <input 
+                    type="number" 
+                    class="form-control" 
+                    id="amount"
+                    #amountInput>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
               <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-              <button type="sumbit" class="btn btn-success">Add</button>
+              <button type="sumbit" class="btn btn-success" (click)="addRecipe()">Add</button>
               <button type="button" class="btn btn-danger">Delete</button>              
               <button type="button" class="btn btn-primary">Clear</button>
+
             </div>
         </div>                
 
